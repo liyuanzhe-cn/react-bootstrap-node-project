@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: 'mongodb://test:test1234@ds223756.mlab.com:23756/mervn-api',
+  mongoURI: 'mongodb+srv://test:qwertqwert@cluster0-rgdfq.mongodb.net/test?retryWrites=true',
   secretOrKey: 'secret'
 };
