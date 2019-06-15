@@ -4,12 +4,12 @@
   "description": "a-developer-community",
   "main": "server.js",
   "scripts": {
-    "client-install-1": "cd client && npm install",
-    "client-install-2": "npm install --prefix client",
-    "client": "npm start --prefix client",
+    "client-install-1": "cd frontEnd && npm install",
+    "client-install-2": "npm install --prefix frontEnd",
+    "client": "npm start --prefix frontEnd",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run frontEnd\""
   },
   "author": "liyuanzhe_cn",
   "license": "ISC",
