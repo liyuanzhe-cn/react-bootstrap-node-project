@@ -24,7 +24,6 @@ class CreateProfile extends Component {
       bio: '',
       wechat: '',
       QQ: '',
-      tengxunkt: '',
       wangyikt: '',
       errors: {}
     };
@@ -50,9 +49,7 @@ class CreateProfile extends Component {
       githubusername: this.state.githubusername,
       bio: this.state.bio,
       wechat: this.state.wechat,
-      QQ: this.state.QQ,
-      tengxunkt: this.state.tengxunkt,
-      wangyikt: this.state.wangyikt,
+      QQ: this.state.QQ
     };
 
     // console.log(profileData);
@@ -87,12 +84,7 @@ class CreateProfile extends Component {
       profile.QQ = !isEmpty(profile.social.QQ)
         ? profile.social.QQ
         : '';
-      profile.tengxunkt = !isEmpty(profile.social.tengxunkt)
-        ? profile.social.tengxunkt
-        : '';
-      profile.wangyikt = !isEmpty(profile.social.wangyikt)
-        ? profile.social.wangyikt
-        : '';
+
 
       const skillsCSV = profile.skills.join(",");
 
@@ -106,9 +98,7 @@ class CreateProfile extends Component {
         githubusername: profile.githubusername,
         bio: profile.bio,
         wechat: profile.wechat,
-        QQ: profile.QQ,
-        tengxunkt: profile.tengxunkt,
-        wangyikt: profile.wangyikt
+        QQ: profile.QQ
       })
     }
 
@@ -144,23 +134,7 @@ class CreateProfile extends Component {
             error={errors.QQ}
           />
 
-          <InputGroup
-            placeholder="腾讯课堂网址"
-            name="tengxunkt"
-            icon="fab fa-wechat"
-            value={this.state.tengxunkt}
-            onChange={this.onChange}
-            error={errors.tengxunkt}
-          />
 
-          <InputGroup
-            placeholder="网易云课堂网址"
-            name="wangyikt"
-            icon="fab fa-wechat"
-            value={this.state.wangyikt}
-            onChange={this.onChange}
-            error={errors.wangyikt}
-          />
         </div>
       );
     }
@@ -169,11 +143,7 @@ class CreateProfile extends Component {
       { label: "* 请选择您的职业", value: "* 请选择您的职业" },
       { label: 'Junior Developer', value: '前端初级工程师' },
       { label: 'Senior Developer', value: '前端中级工程师' },
-      { label: 'HighDeveloper', value: '前端高级工程师' },
-      { label: 'Manager', value: '前端管理' },
-      { label: 'backend Developer', value: '后端开发' },
-      { label: 'python machine learning', value: 'Python机器学习' },
-      { label: 'Other', value: '其他' }
+      { label: 'HighDeveloper', value: '前端高级工程师' }
     ];
     return (
       <div className="create-profile">

@@ -4,9 +4,9 @@
   "description": "a-developer-community",
   "main": "server.js",
   "scripts": {
-    "client-install-1": "cd frontEnd && npm install",
-    "client-install-2": "npm install --prefix frontEnd",
-    "client": "npm start --prefix frontEnd",
+    "frontEnd-install-1": "cd frontEnd && npm install",
+    "frontEnd-install-2": "npm install --prefix frontEnd",
+    "frontEnd": "npm start --prefix frontEnd",
     "start": "node server.js",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run frontEnd\""

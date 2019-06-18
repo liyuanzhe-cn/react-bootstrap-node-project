@@ -23,8 +23,6 @@ class CreateProfile extends Component {
       bio: '',
       wechat: '',
       QQ: '',
-      tengxunkt: '',
-      wangyikt: '',
       errors: {}
     };
 
@@ -46,8 +44,7 @@ class CreateProfile extends Component {
       bio: this.state.bio,
       wechat: this.state.wechat,
       QQ: this.state.QQ,
-      tengxunkt: this.state.tengxunkt,
-      wangyikt: this.state.wangyikt,
+
     };
 
     // console.log(profileData);
@@ -95,23 +92,7 @@ class CreateProfile extends Component {
             error={errors.QQ}
           />
 
-          <InputGroup
-            placeholder="腾讯课堂网址"
-            name="tengxunkt"
-            icon="fab fa-wechat"
-            value={this.state.tengxunkt}
-            onChange={this.onChange}
-            error={errors.tengxunkt}
-          />
 
-          <InputGroup
-            placeholder="网易云课堂网址"
-            name="wangyikt"
-            icon="fab fa-wechat"
-            value={this.state.wangyikt}
-            onChange={this.onChange}
-            error={errors.wangyikt}
-          />
         </div>
       );
     }
